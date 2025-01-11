@@ -33,7 +33,7 @@ const Onboarding = () => {
           <View className="w-[32px] h-[4px] mx-1 bg-[#E2E8F0] rounded-full" />
         }
         activeDot={
-          <View className="w-[32px] h-[4px] mx-1 bg-[#0286FF] rounded-full" />
+          <View className="w-[32px] h-[4px] mx-1 bg-[black] rounded-full" />
         }
         onIndexChanged={(index) => setActiveIndex(index)}
       >
@@ -50,7 +50,7 @@ const Onboarding = () => {
         }
       </Swiper>
 
-      <CustomButton title={isLastSlide ? "Get Started" : "Next"} onPress={() => isLastSlide ? router.replace('/(root)/(auth)/sign-up') : swiperRef.current?.scrollBy(1)} className='w-11/12 mt-10'  />
+      <CustomButton title={isLastSlide ? "Get Started" : "Next"} onPress={() => isLastSlide ? router.replace('/(root)/(auth)/sign-up') : swiperRef.current?.scrollBy(1)} className='w-10/12 mt-10 shadow-none'  />
 
     </SafeAreaView>
 
