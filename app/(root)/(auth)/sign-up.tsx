@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Text, ScrollView, Image, Alert} from  'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import {icons, images} from "@/constants"
-import InputField from "@/components/inputField"
-import CustomButton from '@/components/customButton';
-import { Link, router } from 'expo-router';
-import OAuth from '@/components/OAuth';
-import { View } from 'react-native';
+import React, { useState } from "react";
+import { Text, ScrollView, Image, Alert } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { icons, images } from "@/constants";
+import InputField from "@/components/inputField";
+import CustomButton from "@/components/customButton";
+import { Link, router } from "expo-router";
+import OAuth from "@/components/OAuth";
+import { View } from "react-native";
 import { ReactNativeModal } from "react-native-modal";
-import { useSignUp } from '@clerk/clerk-expo'
-import { fetchAPI } from '@/lib/fetch';
+import { useSignUp } from "@clerk/clerk-expo";
+import { fetchAPI } from "@/lib/fetch";
 
 const SignUp = () => {
   const { isLoaded, signUp, setActive } = useSignUp();
@@ -182,8 +182,14 @@ const SignUp = () => {
             <Text className="text-base text-gray-400 font-Jakarta text-center mt-2">
               You have successfully verified your account.
             </Text>
-            <CustomButton title="Browse Home"  onPress={() => {router.push(`/(root)/(tabs)/home`); setShowSuccessModal(false)}} className="mt-6 shadow-none"  />
-
+            <CustomButton
+              title="Browse Home"
+              onPress={() => {
+                router.push(`/(root)/(tabs)/home`);
+                setShowSuccessModal(false);
+              }}
+              className="mt-6 shadow-none"
+            />
           </View>
         </ReactNativeModal>
       </View>
