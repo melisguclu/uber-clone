@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+# 🚖 Uber Clone
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+ <img src="./assets/images/app.png" alt="Project">
 
-## Get started
+## 📌 Project Overview
 
-1. Install dependencies
+A full-stack ride-hailing mobile application featuring real-time driver tracking, fare estimation, and secure payments.
 
-   ```bash
-   npm install
-   ```
+## 🏆 Core Features
 
-2. Start the app
+- **✔️ User Authentication**  
+  Clerk integration with email verification flow
+- **✔️ oAuth Using Google**  
+  Easy login using Google credentials.
+- **✔️ Real-time Driver Tracking**  
+  Interactive map with live driver positions (Geoapify + Google Maps)
+- **✔️ Intelligent Search**  
+  Google Places Autocomplete for destination selection
+- **✔️ Secure Payments**  
+  Stripe integration for PCI-compliant transactions
+- **✔️ State Management**  
+  Zustand for efficient global state handling
+- **✔️ Cloud Database**  
+  NeonDB PostgreSQL for reliable data storage
 
-   ```bash
-    npx expo start
-   ```
+## 🛠️ Tech Stack
 
-In the output, you'll find options to open the app in a
+### Frontend
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- 🚀 React Native (with Expo) - Cross-platform development
+- ⚡ TypeScript - Type-safe coding
+- 🗺️ Google Maps SDK - Map visualization
+- 🏗️ Zustand - State management
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Backend Services
 
-## Get a fresh project
+- 🗄️ NeonDB - PostgreSQL database
+- 🔑 Clerk - Authentication
+- 💳 Stripe - Payment processing
 
-When you're ready, run:
+### APIs
+
+- 🌎 Google Places API - Location search
+- 📍 Geoapify API - Geocoding services
+- 📱 Expo Location - Device positioning
+
+## 🔧 Installation & Setup
+
+### 1️⃣ Clone Repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/yourusername/uber-clone.git
+cd uber-clone
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2️⃣ Install Dependencies
 
-## Learn more
+Install the project dependencies using npm:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### ️3️⃣ Set Up Environment Variables
 
-## Join the community
+Create a new file named `.env` in the root of your project and add the following content:
 
-Join our community of developers creating universal apps.
+```env
+EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY=
+DATABASE_URL=
+EXPO_PUBLIC_SERVER_URL=
+EXPO_PUBLIC_GEOAPIFY_API_KEY=
+EXPO_PUBLIC_GOOGLE_API_KEY=
+EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 4️⃣ Start the app
+
+```bash
+npx expo start
+```
